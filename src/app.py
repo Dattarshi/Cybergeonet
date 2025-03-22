@@ -1,11 +1,13 @@
 from flask import Flask
 from src.routes import main
+import os
 
 def create_app():
-    # Initialize Flask app instance
-    app = Flask(__name__)
-    
-    # Register the blueprint for routes
+    app = Flask(
+        __name__,
+        static_url_path='/static',
+        static_folder=os.path.abspath(os.path.join(os.path.dirname(__file__), '../static')),
+        template_folder=os.path.abspath(os.path.join(os.path.dirname(__file__), 'templates'))
+    )
     app.register_blueprint(main)
-    
     return app
