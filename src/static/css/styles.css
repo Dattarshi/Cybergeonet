@@ -1,3 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+header img {
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -8,22 +32,30 @@
 .card {
     background: white;
     padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     text-align: center;
+    transition: transform 0.2s ease;
 }
 
-.card h3 {
-    font-size: 1.1em;
-    margin-bottom: 10px;
+.card:hover {
+    transform: scale(1.03);
 }
 
-input[type="text"] {
-    padding: 8px;
-    width: 60%;
-    margin-right: 10px;
+.card a {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #1e1e1e;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
 }
-button {
-    padding: 8px 15px;
-    cursor: pointer;
+
+footer {
+    background-color: #1e1e1e;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    margin-top: 40px;
 }

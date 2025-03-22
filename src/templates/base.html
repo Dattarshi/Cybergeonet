@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>SOC Resource Store</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <head>
+        <meta charset="UTF-8">
+        <title>SOC Analyst Resource Hub | Free Tools</title>
+    
+        <!-- SEO Meta -->
+        <meta name="description" content="Download free IR SOPs, SIEM rules, PowerShell scripts, and threat hunting playbooks for SOC analysts.">
+        <meta name="keywords" content="SOC, cybersecurity, incident response, SIEM, scripts, playbooks, threat hunting, free downloads">
+        <meta name="author" content="Cybergeonet Team">
+    
+        <!-- Open Graph (for LinkedIn, Facebook, etc.) -->
+        <meta property="og:title" content="SOC Analyst Free Resource Hub">
+        <meta property="og:description" content="Your one-stop hub for free SOC automation tools, SOPs, SIEM rules & more.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://cybergeonet.onrender.com/">
+        <meta property="og:image" content="{{ url_for('static', filename='logo.png') }}">
+    
+        <!-- Favicon -->
+        <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    
 </head>
 <body>
     <header>
         <h2>🛡️ SOC Analyst Hub</h2>
         <nav>
-            <a href="/">Home</a> | 
-            <a href="/downloads">Downloads</a>
+            <a href="/">Home</a> |
+            <a href="/downloads">Downloads</a> |
+            <a href="/submit">Submit</a>
         </nav>
     </header>
     
