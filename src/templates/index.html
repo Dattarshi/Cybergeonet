@@ -1,7 +1,36 @@
 {% extends "base.html" %}
-
 {% block content %}
-    <h1>✅ App is working! This is your landing page content.</h1>
-    <p>Try adding your downloadable resources now!</p>
-    <a href="/downloads">Go to Downloads Page →</a>
+    <section>
+        <h1>Welcome to SOC Analyst Free Resource Hub 🛡️</h1>
+        <p>
+            This platform offers free downloadable tools and resources for SOC teams, cybersecurity analysts, and incident responders.
+            Access a growing library of SOPs, PowerShell scripts, SIEM detection rules, and automation tools — all contributed by the community, for the community.
+        </p>
+
+        <p>
+            Whether you're streamlining your threat detection, automating incident response, or building a knowledge base for your blue team, you'll find practical resources here.
+            <strong>Free to download. Free to contribute.</strong>
+        </p>
+
+        <a href="/downloads" class="cta-btn">Browse Resources →</a>
+    </section>
+
+    <section class="how-it-works">
+        <h2>🔍 How It Works</h2>
+        <div class="steps-grid">
+            <div class="step-card">
+                <h3>1️⃣ Explore</h3>
+                <p>Browse a curated library of free SOC tools: SOPs, scripts, detection rules & more.</p>
+            </div>
+            <div class="step-card">
+                <h3>2️⃣ Download</h3>
+                <p>Download and integrate high-value resources into your incident response workflows.</p>
+            </div>
+            <div class="step-card">
+                <h3>3️⃣ Contribute</h3>
+                <p>Share your own tools & scripts to support the wider SOC and IR community.</p>
+            </div>
+        </div>
+    </section>
 {% endblock %}
+
