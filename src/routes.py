@@ -30,6 +30,9 @@ def downloads():
     query = request.args.get('query', '').lower()
     resources = load_resources()
 
+    if filter_type:
+        resources = [r for r in resources if r['type'].upper() == filter_type.upper()]
+
     if query:
         resources = [r for r in resources if query in r['name'].lower() or query in r['type'].lower()]
 
