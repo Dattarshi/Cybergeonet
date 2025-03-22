@@ -28,11 +28,14 @@ def index():
 @main.route('/downloads')
 def downloads():
     query = request.args.get('query', '').lower()
+    filter_type = request.args.get('filter', '').lower()
     resources = load_resources()
 
+    # Apply type filter
     if filter_type:
-        resources = [r for r in resources if r['type'].upper() == filter_type.upper()]
+        resources = [r for r in resources if r['type'].lower() == filter_type]
 
+    # Apply keyword search
     if query:
         resources = [r for r in resources if query in r['name'].lower() or query in r['type'].lower()]
 
