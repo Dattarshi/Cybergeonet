@@ -1,0 +1,4 @@
+mongodb_uri: "mongodb+srv://dhp132000:<dattarshi13>@cluster0.vdrfy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+db_name: "cybergeonet_db"
+collection_name: "raw_feeds"
+otx_api_key: "4ee779c78df61fada708d5927bcae4605a2db691d9457a13789a2c05da45373c"

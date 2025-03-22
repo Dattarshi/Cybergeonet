@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Free Downloads</h2>
+
+<!-- Search bar -->
+<form method="GET" action="/downloads">
+    <input type="text" name="query" placeholder="Search by name or type..." value="{{ query or '' }}">
+    <button type="submit">Search</button>
+</form>
+
+<!-- Resource Grid -->
+<div class="grid-container">
+    {% for item in resources %}
+        <div class="card">
+            <h3>{{ item.name }}</h3>
+            <p>Type: {{ item.type }}</p>
+            <a href="{{ url_for('static', filename='downloads/' + item.file) }}" download>Download</a>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
