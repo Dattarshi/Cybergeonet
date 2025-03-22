@@ -1,16 +1,10 @@
 resources:
-  - name: "IR SOP - Ransomware Response"
-    file: "IR_SOP_Ransomware.pdf"
-    type: "SOP"
-
-  - name: "PowerShell - Basic Triage Script"
-    file: "triage.ps1"
-    type: "Script"
-
-  - name: "SIEM Rule - Failed Login Alert"
-    file: "failed_login_rule.json"
-    type: "SIEM Rule"
-
-  - name: "Threat Hunting Guide - Insider Threats"
-    file: "th_guide_insider_threats.pdf"
-    type: "PDF Guide"
+  - name: Ransomware IR SOP
+    file: Ransomware_IR_SOP.pdf
+    type: SOP
+  - name: Triage Script
+    file: triage_script.ps1
+    type: SCRIPT
+  - name: Excessive Failed Logins Rule
+    file: failed_login_rule.json
+    type: SIEM
