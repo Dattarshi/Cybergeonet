@@ -1,10 +1,10 @@
 resources:
-  - name: Ransomware IR SOP
-    file: Ransomware_IR_SOP.pdf
+  - name: NCSC Ransomware Incident Response Plan
+    file: https://english.ncsc.nl/binaries/ncsc-en/documenten/publications/2022/augustus/2/incident-response-plan-ransomware/Opmaak%2BIncident%2Bresponse%2Bplan_WEB2.pdf
     type: SOP
-  - name: Triage Script
-    file: triage_script.ps1
-    type: SCRIPT
-  - name: Excessive Failed Logins Rule
-    file: failed_login_rule.json
-    type: SIEM
+
+  - name: NIST Computer Security Incident Handling Guide
+    file: https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-61r2.pdf
+    type: SOP
+
+
