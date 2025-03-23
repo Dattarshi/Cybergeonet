@@ -55,15 +55,21 @@ def submit():
             file_path = os.path.join(save_path, file.filename)
             file.save(file_path)
 
-            # Optional YAML update step
-            update_yaml(resource_name, file.filename, category)
+            # ✅ Auto-update YAML when resource is submitted
+            new_entry = {
+                'name': resource_name,
+                'file': file.filename,
+                'type': category.upper()
+            }
+            append_to_yaml(new_entry)
 
-            flash('✅ Resource submitted successfully!', 'success')
+            flash('✅ Resource submitted & added to catalog!', 'success')
             return redirect(url_for('main.submit'))
 
         flash('⚠️ Invalid file type!', 'error')
 
     return render_template('submit.html')
+
 
 # Update YAML file dynamically
 def update_yaml(name, file, category):
@@ -76,6 +82,15 @@ def update_yaml(name, file, category):
         'file': file,
         'type': category.upper()
     })
+    with open(DATA_PATH, "w") as stream:
+        yaml.dump(data, stream)
+
+def append_to_yaml(new_data):
+    with open(DATA_PATH, "r") as stream:
+        data = yaml.safe_load(stream) or {}
+    if "resources" not in data:
+        data["resources"] = []
+    data["resources"].append(new_data)
     with open(DATA_PATH, "w") as stream:
         yaml.dump(data, stream)
 

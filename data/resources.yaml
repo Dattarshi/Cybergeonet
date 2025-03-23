@@ -7,15 +7,4 @@ resources:
     file: https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-61r2.pdf
     type: SOP
 
-  - name: The-Essential-Guide-to-SIEM
-    file: The-Essential-Guide-to-SIEM.pdf
-    type: SIEM
-
-  - name: Federal_Government_Cybersecurity_Incident_and_Vulnerability_Response_Playbooks_508C
-    file: Federal_Government_Cybersecurity_Incident_and_Vulnerability_Response_Playbooks_508C.pdf
-    type: SOP
-  
-  - name: hunting-gathering-powershell_23549
-    file: hunting-gathering-powershell_23549.pdf
-    type: Powrshell
 
